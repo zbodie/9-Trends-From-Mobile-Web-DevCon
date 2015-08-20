@@ -33,11 +33,12 @@ var slides = [{name: 'slides/slide1', title: 'First Slide'},
 
 app.use(function(req, res, next) {
     res.locals.slideNumber = -1;
+	res.locals.showContextMenu = false;
 	next();
 });
 
 app.get('/', function(req, res) {
-	res.render('index', {slideTitle: 'Landing'});
+	res.render('index', {slideTitle: '', showContextMenu: true});
 });
 
 app.get('/slide/:id', function(req, res) {

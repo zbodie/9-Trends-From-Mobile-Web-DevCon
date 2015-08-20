@@ -5,24 +5,33 @@
 	<title>9 Trends From MWDCON</title>
     <!--<link rel="stylesheet" href="/css/style.css" />-->
     <script type='text/javascript' src='/jquery/dist/jquery.min.js'></script>
+	<link rel="stylesheet" href="/materialize/dist/css/materialize.min.css" />
+	<script type='text/javascript' src='/materialize/dist/js/materialize.min.js'></script>
     <link rel="stylesheet" href="/css/style.css" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link type="image/x-icon" href="/images/favicon.png" rel="icon">
   </head>
-  <body oncontextmenu="return false;">
+  <body <% if(!showContextMenu) { %>oncontextmenu="return false;"<% } %>>
 		<!-- Title -->
-		<div class="mdl-grid header-grid">
-			<div class="mdl-cell mdl-cell--1-col"></div>
-			<div class="mdl-cell mdl-cell--2-col"><img src="/images/ISElogo.png" height=80></img></div>
-			<div class="mdl-cell mdl-cell--6-col" style="text-align: center"><div class="mdl-typography--display-3" style="color:white; letter-spacing: 0em;"><%= slideTitle %></div></div>
+		<div class="row header-grid valign-wrapper" style="margin-bottom:0">
+			<div class="col s2 offset-s1 valign"><img src="/images/ISElogo.png" height=80></img></div>
+			<div class="col s6 valign"><h2 style="color:white; letter-spacing: 0em; text-align:center; margin: auto;"><%= slideTitle %></h2></div>
 		</div>
-	  <main class="mdl-layout__content">
-		<%- body %>
-	  </main>
+		<div id="slide-content-wrapper">
+			<%- body %>
+		</div>
   </body>
 </html>
 
 <script>
+$(document).ready(function() {
+	var contentHeight = $('#slide-content-wrapper').height();
+	var bodyHeight = $('body').height();
+	var headerHeight = $('.header-grid').height();
+	
+	var verticalOffset = ((bodyHeight - headerHeight) - contentHeight) * 3 / 8;
+	$('#slide-content-wrapper').css('padding-top', verticalOffset);
+});
 <% if(slideNumber != -1) { %>
 $('body').mouseup(function(event) {
 	console.log(event);
