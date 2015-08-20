@@ -34,6 +34,7 @@ var slides = [{name: 'slides/slide1', title: 'First Slide'},
 app.use(function(req, res, next) {
     res.locals.slideNumber = -1;
 	res.locals.showContextMenu = false;
+	res.locals.centerContent = true;
 	next();
 });
 

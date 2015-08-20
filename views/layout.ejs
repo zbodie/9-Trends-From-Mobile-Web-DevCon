@@ -24,6 +24,7 @@
 </html>
 
 <script>
+<% if(centerContent) { %>
 $(document).ready(function() {
 	var contentHeight = $('#slide-content-wrapper').height();
 	var bodyHeight = $('body').height();
@@ -32,6 +33,7 @@ $(document).ready(function() {
 	var verticalOffset = ((bodyHeight - headerHeight) - contentHeight) * 3 / 8;
 	$('#slide-content-wrapper').css('padding-top', verticalOffset);
 });
+<% } %>
 <% if(slideNumber != -1) { %>
 $('body').mouseup(function(event) {
 	console.log(event);
