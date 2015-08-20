@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>9 Trends From MWDCON</title>
+    <!--<link rel="stylesheet" href="/css/style.css" />-->
+    <script type='text/javascript' src='/jquery/dist/jquery.min.js'></script>
+    <link rel="stylesheet" href="/css/style.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link type="image/x-icon" href="/images/favicon.png" rel="icon">
+  </head>
+  <body oncontextmenu="return false;">
+		<!-- Title -->
+		<div class="mdl-grid header-grid">
+			<div class="mdl-cell mdl-cell--1-col"></div>
+			<div class="mdl-cell mdl-cell--2-col"><img src="/images/ISElogo.png" height=80></img></div>
+			<div class="mdl-cell mdl-cell--6-col" style="text-align: center"><div class="mdl-typography--display-3" style="color:white; letter-spacing: 0em;"><%= slideTitle %></div></div>
+		</div>
+	  <main class="mdl-layout__content">
+		<%- body %>
+	  </main>
+  </body>
+</html>
+
+<script>
+<% if(slideNumber != -1) { %>
+$('body').mouseup(function(event) {
+	console.log(event);
+	if(event.button == 0) { //left click
+		window.location.href = "/slide/" + (<%- slideNumber %> + 1);
+	} else if(event.button == 1) { //middle click
+	} else if(event.button == 2) { //right click
+		window.location.href = "/slide/" + (<%- slideNumber %> - 1);
+	}
+});
+<% } %>
+</script>

@@ -1,0 +1,15 @@
+@import "../material_design_lite/material.min.css";
+
+:root {
+	--ise-green-color:     #8d36cf;
+	--ise-gray-color:      #54585a;
+	--ise-cool-gray-color: #d9d9d6;
+}
+
+.header-grid {
+	background-color: #54585a;
+}
+
+.mdl-layout__header-row {
+	height: 100px;
+}

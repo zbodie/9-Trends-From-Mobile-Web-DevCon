@@ -1,0 +1,20 @@
+{
+  "name": "lunchandlearn",
+  "version": "0.0.1",
+  "homepage": "https://github.com/zbodie/9-Trends-From-Mobile-Web-DevCon",
+  "authors": [
+    "zbodie <zach.bodensteiner@gmail.com>"
+  ],
+  "description": "Presentation for a lunch & learn",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
