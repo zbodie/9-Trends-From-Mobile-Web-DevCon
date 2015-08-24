@@ -27,8 +27,16 @@ var app = express();
   //app.use(express.cookieParser('your secret here'));
   app.use(partials());
 
-var slides = [{name: 'slides/slide1', title: 'First Slide'},
-			  {name: 'slides/slide2', title: 'Second Slide'}
+var slides = [{name: 'slides/slide1', title: '#9. Not just SF'},
+			  {name: 'slides/slide2', title: '#8. ISE not behind'},
+        {name: 'slides/slide3', title: '#7. Outside Phone'},
+        {name: 'slides/slide4', title: '#6. Holy tools Batman!'},
+        {name: 'slides/slide5', title: '#5. Prototyping FTW'},
+        {name: 'slides/slide6', title: '#4. User Driven Exp.'},
+        {name: 'slides/slide7', title: '#3. Design <3 Dev'},
+        {name: 'slides/slide8', title: '#2. Everybody Lean!'},
+        {name: 'slides/slide9', title: '#1. html5 is so... 2015?'},
+        {name: 'slides/slide10', title: 'Thanks a lot.'},
 			 ];
 
 app.use(function(req, res, next) {
