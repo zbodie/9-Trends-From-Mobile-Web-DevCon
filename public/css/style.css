@@ -2,9 +2,39 @@
 :root {
 	--ise-green-color:     #8dc63f;
 	--ise-gray-color:      #54585a;
+	--ise-mango-color:     #f6be00;
+	--ise-blue-color:      #0072ce;
+	--ise-purple-color:    #833177;
 	--ise-cool-gray-color: #d9d9d6;
 }
 
+.ise-green{
+	background-color: #8dc63f !important;
+}
+.ise-gray{
+	background-color: #54585a !important;
+}
+.ise-mango{
+	background-color: #f6be00 !important;
+}
+.ise-blue{
+	background-color: #0072ce !important;
+}
+.ise-purple{
+	background-color: #833177 !important;
+}
+.ise-cool-gray{
+	background-color: #d9d9d6 !important;
+}
+.mango-text{
+	color: #f6be00;
+}
+.cool-gray-text{
+	color: #d9d9d6;
+}
+.gray-text{
+	color: #54585a;
+}
 .header-grid {
 	background-color: #54585a;
 	height: 100px;
