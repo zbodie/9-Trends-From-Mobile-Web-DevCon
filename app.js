@@ -27,7 +27,8 @@ var app = express();
   //app.use(express.cookieParser('your secret here'));
   app.use(partials());
 
-var slides = [{name: 'slides/slide1', title: '#9. Not just SF'},
+var slides = [{name: 'slides/intro', title: 'Intro'},
+			  {name: 'slides/slide1', title: '#9. Not just SF'},
 			  {name: 'slides/slide2', title: '#8. ISE not behind'},
         {name: 'slides/slide3', title: '#7. Outside Phone'},
         {name: 'slides/slide4', title: '#6. Holy tools Batman!'},
